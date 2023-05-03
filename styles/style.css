@@ -1,0 +1,523 @@
+@import url(./reset.css);
+@import url(./fonts.css);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1270px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.header {
+  width: 100%;
+  height: 80px;
+  margin-bottom: 70px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.header .container {
+  /* flex-direction: column; */
+}
+
+.header-top {
+  display: flex;
+  gap: 60px;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  background: #ffffff;
+  /* Основные / Серый светлый */
+  height: 40px;
+  border: 1px solid #ebebf1;
+  border-radius: 5px;
+}
+
+.input::placeholder {
+  position: relative;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  padding-left: 39px;
+  /* Основные / Серый средний */
+
+  color: #bbc4d6;
+}
+
+.search {
+  position: relative;
+  width: 100%;
+}
+
+.search-icon {
+  content: "";
+  position: absolute;
+  background: url(../assets/icons/search.svg) no-repeat;
+  top: 25%;
+  left: 14px;
+  width: 100%;
+  height: 100%;
+}
+
+.search-mobile {
+  display: none;
+}
+
+.header-person {
+  align-items: center;
+  height: 100%;
+  display: flex;
+  gap: 10px;
+  padding-left: 19px;
+  border-left: 1px solid #ebebf1;
+}
+.person-name {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  /* identical to box height, or 17px */
+
+  text-align: right;
+  letter-spacing: 0.01em;
+
+  /* Основные / Темно-серый */
+
+  color: #768298;
+}
+
+.person-mobile {
+  display: none;
+}
+
+.hero {
+}
+.hero .container {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+.title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 160%;
+  /* identical to box height, or 58px */
+
+  text-transform: uppercase;
+
+  /* Основные / Черно-синий */
+
+  color: #121920;
+}
+/* .partners {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 27px;
+} */
+
+/* .partners {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+} */
+
+.partners {
+  display: flex;
+  width: 100%;
+  gap: 27px;
+  flex-wrap: wrap;
+  /* align-items: flex-start; */
+}
+
+img {
+}
+
+.partners a img {
+  background: #ffffff;
+
+  border: 1px solid #ebebf1;
+  border-radius: 5px;
+}
+
+.henkel {
+  padding: 28px 85px;
+}
+.john {
+  padding: 38px 27px;
+}
+.mac {
+  padding: 28px 101px;
+}
+.ikea {
+  padding: 28px 64px;
+}
+.reebok {
+  padding: 36px 26px;
+}
+.nike {
+  padding: 28px 83px;
+}
+
+.cater {
+  padding: 42px 27px;
+}
+
+/* @media (max-width: 1279px) {
+  .partners {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+
+  img {
+    box-sizing: content-box;
+  }
+
+  .henkel {
+    padding: 28px 56px;
+    height: 64px;
+    width: 117px;
+  }
+  .john {
+    padding: 43px 23px;
+    height: 34px;
+    width: 183px;
+  }
+  .mac {
+    padding: 23px 65px;
+    height: 74px;
+    width: 99px;
+  }
+  .ikea {
+    padding: 25px 27px;
+    height: 70px;
+    width: 175px;
+  }
+  .reebok {
+    padding: 41px 21px;
+    height: 38px;
+    width: 187px;
+  }
+  .nike {
+    padding: 23px 44px;
+    height: 74px;
+    width: 143px;
+  }
+
+  .cater {
+    padding: 45px 16px;
+    height: 30px;
+    width: 196px;
+  }
+  .header .container {
+    gap: 49px;
+  }
+}
+
+@media (max-width: 760px) {
+  .partners {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  .header {
+    margin-bottom: 35px;
+  }
+  .header-top {
+    gap: 30px;
+  }
+
+  .header.container {
+  }
+}
+
+@media (max-width: 590px) {
+  .partners {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+  .header {
+    margin-bottom: 70px;
+    height: 104px;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-person {
+    display: none;
+  }
+
+  .header-top {
+    justify-content: space-between;
+    height: 100%;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .search {
+    display: none;
+  }
+  .search-mobile {
+    display: inline-block;
+    height: 42px;
+  }
+
+  .person-mobile {
+    display: inline-block;
+  }
+
+  .input {
+    border: none;
+  }
+
+  .input::placeholder {
+    padding-left: 42px;
+    color: #bbc4d6;
+  }
+
+  .search {
+    position: relative;
+    width: 100%;
+  }
+
+  .search-icon {
+    left: 17px;
+  }
+  .henkel {
+    padding: 29px 95px;
+    height: 82px;
+    width: 145px;
+  }
+  .john {
+    padding: 48px 50px;
+    height: 84px;
+    width: 234px;
+  }
+  .mac {
+    padding: 33px 117px;
+    height: 75px;
+    width: 100px;
+  }
+  .ikea {
+    padding: 31px 70px;
+    height: 78px;
+    width: 194px;
+  }
+  .reebok {
+    padding: 46px 51px;
+    height: 48px;
+    width: 232px;
+  }
+  .nike {
+    padding: 33px 97px;
+    height: 74px;
+    width: 141px;
+  }
+
+  .cater {
+    padding: 51px 44px;
+    height: 38px;
+    width: 247px;
+  }
+} */
+
+@media (max-width: 1279px) {
+  .partners {
+    /* margin: 0 auto; */
+  }
+
+  img {
+    box-sizing: content-box;
+  }
+
+  .title {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 160%;
+  }
+  .henkel {
+    padding: 28px 56px;
+    height: 64px;
+    width: 121px;
+  }
+  .john {
+    padding: 43px 23px;
+    height: 34px;
+    width: 180px;
+  }
+  .mac {
+    padding: 23px 65px;
+    height: 74px;
+    width: 98px;
+  }
+  .ikea {
+    padding: 19px 27px;
+    height: 71px;
+    width: 182px;
+  }
+  .reebok {
+    padding: 35px 17px;
+    height: 38px;
+    width: 187px;
+  }
+  .nike {
+    padding: 19px 43px;
+    height: 74px;
+    width: 143px;
+  }
+
+  .cater {
+    padding: 42px 20px;
+    height: 30px;
+    width: 196px;
+  }
+  .header .container {
+    gap: 49px;
+  }
+}
+
+@media (max-width: 778px) {
+  .hero.container {
+    gap: 29px;
+  }
+  .partners {
+    gap: 20px;
+  }
+  .header {
+    margin-bottom: 70px;
+  }
+  .header-top {
+    gap: 53px;
+  }
+
+  .header-person {
+    gap: 15px;
+  }
+
+  .header.container {
+  }
+}
+
+@media (max-width: 590px) {
+  .partners {
+    align-items: center;
+    justify-content: center;
+  }
+  .header {
+    margin-bottom: 70px;
+    height: 104px;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-person {
+    display: none;
+  }
+
+  .header-top {
+    justify-content: space-between;
+    height: 100%;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .search {
+    display: none;
+  }
+  .search-mobile {
+    display: inline-block;
+    height: 42px;
+  }
+
+  .person-mobile {
+    display: inline-block;
+  }
+
+  .input {
+    border: none;
+  }
+
+  .input::placeholder {
+    /* padding-left: 49px; */
+    padding-left: 42px;
+    color: #bbc4d6;
+  }
+
+  .search {
+    position: relative;
+    width: 100%;
+  }
+
+  .search-icon {
+    left: 17px;
+  }
+  .henkel {
+    padding: 29px 95px;
+    height: 82px;
+    width: 145px;
+  }
+  .john {
+    padding: 48px 50px;
+    height: 84px;
+    width: 234px;
+  }
+  .mac {
+    padding: 33px 117px;
+    height: 75px;
+    width: 100px;
+  }
+  .ikea {
+    padding: 31px 70px;
+    height: 78px;
+    width: 194px;
+  }
+  .reebok {
+    padding: 46px 51px;
+    height: 48px;
+    width: 232px;
+  }
+  .nike {
+    padding: 33px 97px;
+    height: 74px;
+    width: 141px;
+  }
+
+  .cater {
+    padding: 51px 44px;
+    height: 38px;
+    width: 247px;
+  }
+}
